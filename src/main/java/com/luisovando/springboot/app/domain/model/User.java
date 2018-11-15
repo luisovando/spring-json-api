@@ -6,21 +6,33 @@ import java.util.Date;
 import io.katharsis.resource.annotations.JsonApiId;
 import io.katharsis.resource.annotations.JsonApiResource;
 
-@JsonApiResource(type="users")
+@JsonApiResource(type = "users")
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@JsonApiId
 	private Long id;
-	
+
 	private String firstName;
-	
+
 	private String lastName;
-	
+
 	private String email;
-	
+
 	private Date createdAt;
+
+	public User() {
+		this.id = 1L;
+		this.createdAt = new Date();
+	}
+
+	public User(String firstName, String lastName, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
 
 	public Long getId() {
 		return id;
