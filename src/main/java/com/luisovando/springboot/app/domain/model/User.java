@@ -23,12 +23,11 @@ public class User implements Serializable {
 	private Date createdAt;
 
 	public User() {
-		this.id = 1L;
-		this.createdAt = new Date();
 	}
 
 	public User(String firstName, String lastName, String email) {
-		super();
+		this.id = 1L;
+		this.createdAt = new Date();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
